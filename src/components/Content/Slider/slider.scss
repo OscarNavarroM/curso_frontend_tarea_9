@@ -1,0 +1,73 @@
+@use "../../../styles/variables/variables" as var;
+.main__slider {
+  position: relative;
+}
+.main__slider .message {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-inline: 10vw;
+}
+.main__slider .message h2 {
+  color: var.$slider-title-color;
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.main__slider .message p {
+  color: var.$slider-p-color;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.main__slider .img-desktop {
+  display: none !important;
+}
+.main__slider .img-tablet {
+  display: none !important;
+}
+.main__slider .img-mobile {
+  height: var.$slider-img-height;
+}
+@media screen and (min-width: var.$medium-breakpoint) and (max-width: var.$special-img-breakpoint) {
+  .main__slider .message h2 {
+    font-size: 4rem;
+  }
+  .main__slider .message p {
+    font-size: 2rem;
+  }
+  .main__slider .img-desktop {
+    display: none !important;
+  }
+  .main__slider .img-tablet {
+    display: block !important;
+    height: var.$slider-img-height;
+  }
+  .main__slider .img-mobile {
+    display: none !important;
+  }
+}
+@media screen and (min-width: var.$special-img-breakpoint) {
+  .main__slider .message h2 {
+    font-size: 3rem;
+  }
+  .main__slider .message p {
+    font-size: 1.8rem;
+  }
+  .main__slider .img-desktop {
+    display: block !important;
+    height: var.$slider-img-height;
+  }
+  .main__slider .img-tablet {
+    display: none !important;
+  }
+  .main__slider .img-mobile {
+    display: none !important;
+  }
+}

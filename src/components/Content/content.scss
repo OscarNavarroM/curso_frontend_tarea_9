@@ -1,0 +1,7 @@
+@use "../../styles/variables/variables" as var;
+.layout__main {
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: var.$main-grid-template-row;
+}

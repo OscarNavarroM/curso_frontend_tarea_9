@@ -1,0 +1,31 @@
+@use "../../styles/variables/variables" as var;
+.layout__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var.$footer-bg-color;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+.layout__footer article h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: var.$footer-title-color;
+}
+.layout__footer article p {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var.$footer-p-color;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: var.$medium-breakpoint) and (max-width: var.$large-breakpoint) {
+  .layout__footer article h3 {
+    font-size: 2rem;
+  }
+  .layout__footer article p {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: var.$large-breakpoint) {
+}
